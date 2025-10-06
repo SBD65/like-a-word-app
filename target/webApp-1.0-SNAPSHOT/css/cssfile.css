@@ -1,0 +1,73 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 0px;
+}
+
+#metinAlani {
+    /* Eski stillerinizden koruduklarımız */
+    font-size: 100%;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+   
+    transition: all 0.3s ease; /* Efektler için geçiş süresini biraz kısalttık */
+    
+    /* İsteğinize göre yapılan DEĞİŞİKLİKLER ve EKLEMELER */
+
+    /* 1. Sabit Boyut ve A4 Oranı */
+    display: block; /* margin: auto'nun çalışması için block olmalı */
+    width: 80%;  /* Yüzdeli (%) değer yerine sabit bir piksel (px) değeri verdik */
+    aspect-ratio: 210 / 297; /* A4 kağıdı en/boy oranını kilitler */
+
+    /* 2. Boyutun Değiştirilememesi */
+    resize: none; /* Kullanıcının yeniden boyutlandırmasını engeller */
+
+    /* 3. Hafif Gölge */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+
+    /* 4. Ek İyileştirmeler */
+    padding: 40px; /* Kenar boşluklarını artırarak daha iyi bir görünüm sağladık */
+    box-sizing: border-box; /* padding ve border'ın genişliğe dahil edilmesini sağlar */
+    outline: none; /* Tıklandığında çıkan varsayılan çerçeveyi kaldırır */
+    border-radius: 3px; /* Kenarları hafifçe yuvarlatır */
+}
+
+/* Tıklandığında (focus olduğunda) daha belirgin bir çerçeve ekleyelim */
+#metinAlani:focus {
+    border-color: #007bff; /* Mavi bir çerçeve rengi */
+    box-shadow: 0 0 50px rgba(0, 123, 255, 0.7); /* Gölgeyi de hafif mavi yapar */
+}
+
+.buton-grup button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #007BFF;
+    background-color: #fff;
+    color: #007BFF;
+    border-radius: 5px;
+}
+
+.buton-grup button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Farklı fontlar için CSS sınıfları */
+.font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.font-times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font-courier {
+    font-family: 'Courier New', Courier, monospace;
+}

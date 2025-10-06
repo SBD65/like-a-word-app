@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Değiştirici</title>
+    <link rel="stylesheet" href="css/cssfile.css">
+</head>
+<body>
+
+    <h1>Font Değiştirme Uygulaması</h1>
+
+    
+    <form action="response.jsp">
+        <input type="text" name="dosyaAdi" id="dosyaAdi" />
+        <input type="number" name="fontSize" value="6" />
+         <textarea id="metinAlani" name="metinAlani" rows="4" cols="20">
+    </textarea>
+        <input type="submit" value="Gonder" />
+        
+    </form>
+   
+<select name="form">
+    <option id="btnArial">Arial</option>
+    <option id="btnVerdana">Verdana</option>
+    <option id="btnTimes">Times New Roman</option>
+    <option id="btnCourier">Courier New</option>
+</select>
+    <script src="js/jsfile.js"></script>
+
+</body>
+</html>
