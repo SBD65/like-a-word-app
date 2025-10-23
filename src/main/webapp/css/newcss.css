@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 0px;
+    
+    /* Arka plan resminin yolunu belirtin */
+
+}
+body::before{
+        
+            content: '';
+            /* Konumu sabitleyerek ekranı kaplamasını sağlar */
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* Saydamlaştırılacak görsel (Örnek bir doku görseli kullanıldı) */
+            background-image: url('../Dosyalar/tahta1.jpg'); 
+            background-size: cover;
+            background-position: center center;
+            
+            /* İSTENEN OPAKLIĞI AYARLA: %30 Opaklık */
+            opacity: 1; 
+            
+            /* İçeriğin arkasına gönder */
+            z-index: -1;
+       
+
+}
+.arkaplan-resmi-opak {
+    position: relative; /* İçerideki absolute konumlandırma için gerekli */
+    z-index: 1; /* İçeriğin önde kalması için */
+    color: white; /* Yazı rengi */
+    padding: 20px;
+}
+
+.arkaplan-resmi-opak::before {
+    content: ''; /* Pseudo-element için zorunlu */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('images/arkaplan.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    opacity: 0.4; /* SADECE BU ARKA PLAN KATMANININ OPAKLIĞI */
+
+    /* Bu katmanı içeriğin arkasına gönderir */
+    z-index: -1; 
+}
+#metinAlani {
+    /* Eski stillerinizden koruduklarımız */
+    font-size: 16pt;
+    border: 1px solid #ccc;
+  
+   
+    transition: all 0.3s ease; /* Efektler için geçiş süresini biraz kısalttık */
+    
+    /* İsteğinize göre yapılan DEĞİŞİKLİKLER ve EKLEMELER */
+
+    /* 1. Sabit Boyut ve A4 Oranı */
+    display: block; /* margin: auto'nun çalışması için block olmalı */
+    width: 750px;  /* Yüzdeli (%) değer yerine sabit bir piksel (px) değeri verdik */
+    aspect-ratio: 210 / 297; /* A4 kağıdı en/boy oranını kilitler */
+    margin-left: 20px;
+    
+    resize: none; /* Kullanıcının yeniden boyutlandırmasını engeller */
+
+    /* 3. Hafif Gölge */
+     box-shadow: 0 0 50px 5px rgba(0, 0, 0, 1);
+
+    /* 4. Ek İyileştirmeler */
+    padding: 40px; /* Kenar boşluklarını artırarak daha iyi bir görünüm sağladık */
+    box-sizing: border-box; /* padding ve border'ın genişliğe dahil edilmesini sağlar */
+    outline: none; /* Tıklandığında çıkan varsayılan çerçeveyi kaldırır */
+    border-radius: 3px; /* Kenarları hafifçe yuvarlatır */
+}
+
+/* Tıklandığında (focus olduğunda) daha belirgin bir çerçeve ekleyelim */
+#metinAlani:focus {
+    border-color: #007bff; /* Mavi bir çerçeve rengi */
+   box-shadow: 0 0 50px rgba(0, 123, 255, 0.7);  /* Gölgeyi de hafif mavi yapar */
+}
+.kayit{
+    margin: auto;
+}
+.font-grup button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #007BFF;
+    background-color: #fff;
+    color: #007BFF;
+    border-radius: 5px;
+ 
+}
+.menu {
+    background-color: rgba(0, 0, 0, 0.65);
+    color: whitesmoke;
+    margin-left: 100px;
+    width: 600px;  /* Sabit genişlik */
+    height: 150px; /* (İsteğe bağlı) Sabit yükseklik */
+
+    /* Kenarları yumuşatmak için eklenen satır */
+    border-radius: 10px; /* 10 piksellik bir ovallik verir */
+}
+.align-grup{
+    margin: 10px;
+}
+.style-grup{
+      margin: 10px;
+}
+.font-grup{
+       margin: 10px;
+}
+.font-grup button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+      .font-arial { font-family: Arial, Helvetica, sans-serif; }
+        .font-verdana { font-family: Verdana, Geneva, Tahoma, sans-serif; }
+        .font-tahoma { font-family: Tahoma, Geneva, sans-serif; }
+        .font-trebuchet { font-family: 'Trebuchet MS', 'Lucida Grande', sans-serif; }
+        .font-century { font-family: 'Century Gothic', Futura, sans-serif; }
+        .font-times { font-family: 'Times New Roman', Times, serif; }
+        .font-georgia { font-family: Georgia, 'Times New Roman', serif; }
+        .font-palatino { font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+        .font-courier { font-family: 'Courier New', Courier, monospace; }
+        .font-consolas { font-family: Consolas, Monaco, 'Lucida Console', monospace; }
+  

@@ -3,30 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font Değiştirici</title>
-    <link rel="stylesheet" href="css/cssfile.css">
+    <title>Yazı Duzenleyici</title>
+    <link rel="stylesheet" href="css/newcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <h1>Font Değiştirme Uygulaması</h1>
+    <form action="response.jsp" id="editorForm">
+        <div class="menu">
+            
+            <div class="kayit">
+                <label for="dosyaAdi">Dosya Adı:</label>
+                <input type="text" name="dosyaAdi" id="dosyaAdi" placeholder="Dosya adını girin..." required/>
+                <button type="submit">Kaydet</button>
+                <button type="button" id="btn-clear" title="Temizle">
+                    Temizle
+                </button>
+            </div>
+            
+             <div class="font-grup">
+                <label for="fontSelect">   Font:</label>
+                <select name="form" id="fontSelect">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Century Gothic">Century Gothic</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Palatino Linotype">Palatino Linotype</option>
+                    <option value="Consolas">Consolas</option>
+                </select>
+                
+                <label for="font-size">  Boyut:</label>
+                <input type="number" name="fontSize" value="16" id="font-size" min="8" max="72"/>
+            </div>
 
-    
-    <form action="response.jsp">
-        <input type="text" name="dosyaAdi" id="dosyaAdi" />
-        <input type="number" name="fontSize" value="6" />
-         <textarea id="metinAlani" name="metinAlani" rows="4" cols="20">
-    </textarea>
-        <input type="submit" value="Gonder" />
+            <div class="style-grup">
+                <button type="button" id="btn-bold" title="Kalın">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+                <button type="button" id="btn-italic" title="Eğik">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+                <button type="button" id="btn-underline" title="Altı Çizili">
+                    <i class="fa-solid fa-underline"></i>      
+                </button>
+                
+                <label for="text-color" class="color-label" title="Metin Rengi">
+                    <i class="fa-solid fa-palette"></i>
+                <input type="color" id="text-color-picker" value="#000000">
+                    </label>
+            </div>
+
+            <div class="align-grup">
+                <button type="button" id="btn-align-left" title="Sola Hizala">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button type="button" id="btn-align-center" title="Ortala">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button type="button" id="btn-align-right" title="Sağa Hizala">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+            </div>
+           </div> 
+            <textarea id="metinAlani" name="metinAlani" rows="4" cols="20" placeholder="Buraya yazın..."></textarea>
+            
+            <input type="hidden" id="isBold" name="isBold" value="false">
+            <input type="hidden" id="isItalic" name="isItalic" value="false">
+            <input type="hidden" id="isUnderline" name="isUnderline" value="false">
+            <input type="hidden" id="alignment" name="alignment" value="left">
+            <input type="hidden" id="textColor" name="textColor" value="#000000">
+            
         
     </form>
    
-<select name="form">
-    <option id="btnArial">Arial</option>
-    <option id="btnVerdana">Verdana</option>
-    <option id="btnTimes">Times New Roman</option>
-    <option id="btnCourier">Courier New</option>
-</select>
-    <script src="js/jsfile.js"></script>
+
+    <script src="js/js1.js"></script>
 
 </body>
 </html>
