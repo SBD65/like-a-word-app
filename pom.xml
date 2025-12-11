@@ -11,7 +11,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakartaee>10.0.0</jakartaee>
     </properties>
-    
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/SBD65/like-a-word-app</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
@@ -19,21 +26,17 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
-          <dependency>
+        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>5.2.5</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.5</version>
         </dependency>
     </dependencies>
-        
-      
-        
         
     <build>
         <plugins>
