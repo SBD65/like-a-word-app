@@ -147,11 +147,3 @@ btnClear.addEventListener('click', function() {
     btnItalic.classList.remove('active');
     btnUnderline.classList.remove('active');
 });
-
-// CSS'inize şunu eklerseniz butonlar basılı gibi görünür:
-/*
-.style-grup button.active, .align-grup button.active {
-    background-color: #007BFF;
-    color: #fff;
-}
-*/
